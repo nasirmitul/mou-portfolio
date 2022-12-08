@@ -1,0 +1,1221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary: #F7B843;
+    --bg: #212020;
+    --white: #ffffff;
+    --white-100: rgba(255, 255, 255, 0.6);
+    --white-50: rgba(219, 229, 255, 0.2);
+    --padding-h: 5vw;
+    --padding-v: 2rem;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.my-container {
+    width: min(1520px, 90%);
+    margin-inline: auto;
+}
+
+
+/* ============ Custom Scrollbar ============= */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+
+/* ============ hero section ============= */
+
+.sec-title {
+    margin: 0px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.sec-title .title {
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.sec-title .line1 {
+    height: 2px;
+    width: 85px;
+    background: var(--primary);
+    margin-top: -5px;
+}
+
+.sec-title .line2 {
+    height: 2px;
+    width: 65px;
+    background: var(--primary);
+}
+
+
+/* ============ hero section ============= */
+
+.hero {
+    background: var(--bg);
+    min-height: 100vh;
+    width: 100vw;
+}
+
+
+/* ============ Overlay ============= */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--bg);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    top: 25%;
+    width: fit-content;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay .closebtn .cross-1 {
+    height: 2px;
+    width: 40px;
+    background: var(--white);
+    position: relative;
+    transform: rotate(45deg);
+    transition: .4s;
+}
+
+.overlay .closebtn .cross-2 {
+    height: 2px;
+    width: 40px;
+    background: var(--white);
+    position: relative;
+    bottom: 2px;
+    transform: rotate(-45deg);
+    transition: .4s;
+    transition-delay: .1s;
+}
+
+.overlay .closebtn:hover .cross-1 {
+    transform: rotate(360deg);
+}
+
+.overlay .closebtn:hover .cross-2 {
+    transform: rotate(360deg);
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+/* ============ nav bar ============= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .hamburger {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: var(--white-50);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+nav .hamburger .line {
+    height: 2px;
+    background: var(--white);
+    position: relative;
+    right: 30%;
+}
+
+nav .hamburger .line-1 {
+    width: 40px;
+    transition: .5s;
+}
+
+nav .hamburger .line-2 {
+    width: 30px;
+    transition: .5s;
+    transition-delay: .1s;
+}
+
+nav .hamburger .line-3 {
+    width: 20px;
+    transition: .5s;
+    transition-delay: .3s;
+}
+
+
+nav .hamburger:hover .line-1 {
+    width: 20px;
+    transform: translateX(-2px);
+}
+
+nav .hamburger:hover .line-2 {
+    width: 40px;
+    transform: translateX(-5px);
+}
+
+nav .hamburger:hover .line-3 {
+    width: 30px;
+    transform: translateX(-8px);
+}
+
+nav .nav-menus {
+    position: relative;
+    width: calc(100% - 100px);
+    display: flex;
+    justify-content: space-between;
+    left: 100px;
+    padding: 40px 100px;
+}
+
+nav .nav-menus .nav-left ul {
+    display: flex;
+    gap: 55px;
+}
+
+nav .nav-menus .nav-left ul li a {
+    color: var(--white);
+    font-weight: 300;
+}
+
+nav .nav-menus .nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-menus .nav-right .circle {
+    height: 50px;
+    width: 50px;
+    background: var(--white);
+    border-radius: 50%;
+    position: relative;
+    left: 35px;
+}
+
+nav .nav-menus .nav-right a {
+    color: var(--white);
+    position: relative;
+    mix-blend-mode: difference;
+}
+
+nav .nav-menus .nav-right a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 45px;
+    background-color: var(--primary);
+    bottom: -2px;
+    right: 0;
+}
+
+.hero .line-left {
+    height: 100vh;
+    width: 1px;
+    position: absolute;
+    background: var(--white-50);
+    left: 100px;
+    top: 0;
+}
+
+.hero .line-bottom {
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    background: var(--white-50);
+    left: 0px;
+    bottom: 0px;
+}
+
+.hero .hero-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 200px;
+    gap: 70px;
+}
+
+.hero .hero-main .left {
+    width: 50%;
+}
+
+.hero .hero-main .left h1 {
+    font-size: 5rem;
+    font-weight: 200;
+    color: var(--white);
+    margin-bottom: 50px;
+    line-height: 80px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.hero .hero-main .left p {
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--white-100);
+    position: relative;
+    width: 95%;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.hero .hero-main .left p::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100px;
+    background: var(--primary);
+    bottom: -15px;
+    left: 0;
+    opacity: 1;
+}
+
+.hero .hero-main .right {
+    width: 50%;
+}
+
+.hero .hero-main .right img {
+    width: 100%;
+    opacity: 0.7;
+    z-index: 11;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.hero .hero-main .social-links {
+    position: absolute;
+    right: 100px;
+    top: 250px;
+}
+
+.hero .hero-main .social-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.hero .hero-main .social-links ul li a {
+    color: var(--white-100);
+    transition: .5s ease;
+    position: relative;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.hero .hero-main .social-links ul li a:hover {
+    color: var(--primary);
+    transform: rotate(30deg) scale(1.4) translateY(3px);
+}
+
+.hero .numbers {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+
+.hero .numbers .number {
+    width: calc(100vw / 4.2);
+    height: 200px;
+    /* background: var(--white-50); */
+    padding: 25px 40px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    position: relative;
+    transform: translateY(-60px);
+}
+
+.hero .number-1 {
+    background: rgba(254, 245, 231, 0.9);
+}
+
+.hero .number-2 {
+    background: rgba(233, 247, 239, 0.9);
+}
+
+.hero .number-3 {
+    background: rgba(245, 238, 248, 0.9);
+}
+
+.hero .numbers .number h2 {
+    font-size: 3rem;
+    color: var(--bg);
+    font-weight: 600;
+    line-height: 70px;
+}
+
+.hero .numbers .number p {
+    font-size: 1.2rem;
+    color: var(--bg);
+    font-weight: 300;
+}
+
+.hero .numbers .number.number-2 {
+    border-left: 1px solid var(--white);
+    border-right: 1px solid var(--white);
+}
+
+.hero .scroll-down {
+    position: absolute;
+    left: 200px;
+    bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: MoveUpDown 2s linear infinite;
+}
+
+@keyframes MoveUpDown {
+
+    0%,
+    100% {
+        bottom: 90px;
+    }
+
+    50% {
+        bottom: 75px;
+    }
+}
+
+.hero .scroll-down p {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+.hero .scroll-down .triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid var(--primary);
+}
+
+
+/* ============ About Me ============= */
+
+.about-me {
+    padding: 70px 0 100px 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--white-50);
+}
+
+.about-me-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-me-detail .left {
+    width: 48%;
+}
+
+.about-me-detail .right {
+    width: 48%;
+}
+
+.about-me-detail .left h2 {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.about-me-detail .left .about-info {
+    font-size: .9rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 21px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.about-me-detail .left .image img {
+    width: clamp(250px, 25vw, 400px);
+    height: auto;
+}
+
+.about-me-detail .right {
+    position: relative;
+    bottom: 10px;
+}
+
+.about-me-detail .right .accordion {
+    background: transparent;
+    text-transform: uppercase;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    padding: 18px 0 18px 0;
+    width: 100%;
+    outline: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: 0.4s;
+    padding-left: 20px;
+    border-radius: 5px 0 0 0;
+}
+
+.about-me-detail .right .accordion-1 {
+    border-left: 10px solid #FEF9E7;
+    border-bottom: 2px solid #FEF9E7;
+}
+
+.about-me-detail .right .accordion-2 {
+    border-left: 10px solid #A3E4D7;
+    border-bottom: 2px solid #A3E4D7;
+}
+
+.about-me-detail .right .accordion-3 {
+    border-left: 10px solid #AED6F1;
+    border-bottom: 2px solid #AED6F1;
+}
+
+.about-me-detail .right .accordion-4 {
+    border-left: 10px solid #D2B4DE;
+    border-bottom: 2px solid #D2B4DE;
+}
+
+.about-me-detail .right .active,
+.about-me-detail .right .accordion:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.about-me-detail .right .accordion:after {
+    content: '+';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.about-me-detail .right .active:after {
+    content: "\2212";
+}
+
+.about-me-detail .right .panel {
+    margin-bottom: 5px;
+    padding: 0 5px 0;
+    color: var(--white-100);
+    max-height: 0;
+    overflow: hidden;
+    border-bottom: 1px solid var(--white-50);
+    transition: max-height 0.2s ease-out;
+}
+
+
+/* ============ my projects ============= */
+
+.my-projects {
+    padding: 70px 0 100px 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--white-50);
+}
+
+.my-projects .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-projects .tab-cont {
+    min-width: 180px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+}
+
+.my-projects .tab-cont button {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.3rem;
+    font-weight: 200;
+    text-align: left;
+    position: relative;
+    color: var(--white-100);
+    font-family: 'Roboto Flex', sans-serif;
+    cursor: pointer;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.my-projects .tab-cont button .line {
+    height: 2px;
+    width: 33px;
+    background: var(--white-100);
+    margin: 0 10px;
+    transition: .5s;
+}
+
+.my-projects .tab-cont button:hover .line {
+    width: 50px;
+    transform: translateX(6px);
+}
+
+.my-projects .tab-cont button.active {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.my-projects .project .all-project {
+    margin-left: 30px;
+}
+
+.my-projects .project .tab-content {
+    display: none;
+}
+
+.my-projects .project .tab-content.active {
+    display: block;
+}
+
+.my-projects .project .tab-content .contents {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: anime 1s;
+}
+
+.my-projects .project .tab-content .contents img {
+    width: clamp(250px, 45vw, 700px);
+    height: auto;
+    object-fit: cover;
+}
+
+.my-projects .project .tab-content .contents .name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.my-projects .project .tab-content .contents .description {
+    font-size: .9rem;
+    font-weight: 200;
+    color: var(--white-100);
+    margin-bottom: 0;
+}
+
+.my-projects .project .tab-content .contents .technology {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+.my-projects .project .tab-content .contents .action-buttons {
+    display: flex;
+    gap: 60px;
+}
+
+.my-projects .project .tab-content .contents .action-buttons a {
+    color: var(--white);
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.my-projects .project .tab-content .contents .action-buttons a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 45px;
+    bottom: -3px;
+    left: 0;
+    background: var(--white);
+}
+
+
+.my-projects .project .tab-content .contents .more-details {
+    margin-top: 35px;
+}
+
+.my-projects .project .tab-content .contents .more-details button {
+    padding: 8px 20px;
+    font-size: 1.02rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    outline: none;
+    background: transparent;
+    color: var(--primary);
+    transition: .5s;
+}
+
+.my-projects .project .tab-content .contents .more-details button:hover {
+    background: var(--white);
+    border: 2px solid var(--white);
+    color: var(--bg);
+    transform: translateX(6px);
+}
+
+
+@keyframes anime {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+
+
+
+/* ============ Project View ============= */
+.project-view {
+    background: var(--bg);
+    padding: 30px 0 80px 0;
+}
+
+.project-container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+.project-view .project-title h1 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.project-view .project-title p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--white-100);
+}
+
+.project-view .project-title {
+    margin-bottom: 40px;
+}
+
+.project-view .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-view .images img {
+    width: calc(50% - 10px);
+}
+
+.project-view .project-description .des {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 300;
+    /* margin: 20px 0 50px 0; */
+}
+
+.project-view .more-project-info .info {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--white);
+}
+
+.project-view .more-project-info .info span {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.project-view .more-project-info a {
+    color: var(--primary);
+}
+
+.project-view .more-title {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin: 40px 0 20px 0;
+    position: relative;
+}
+
+.project-view .more-title::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 85px;
+    background: var(--primary);
+    left: 0;
+    bottom: -3px;
+}
+
+
+
+/* ============ My Blogs ============= */
+
+.my-blogs {
+    padding: 70px 0 100px 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--white-50);
+}
+
+.my-blogs .blogs h1 {
+    font-size: 5rem;
+    color: var(--white);
+    font-weight: 100;
+    text-align: center;
+}
+
+
+
+
+
+/* ============ Contact ============= */
+
+.contact {
+    background: var(--bg);
+    padding: 70px 0 200px 0;
+    border-bottom: 1px solid var(--white-50);
+}
+
+.contact .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    gap: 200px;
+}
+
+.contact .contact-info .left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: min(500px, 95%);
+}
+
+.contact .contact-info .left .des {
+    color: var(--white-100);
+    font-size: 1rem;
+    font-weight: 300;
+    width: 100%;
+}
+
+
+.contact .contact-info .left .info h5 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.contact .contact-info .left .info p,
+.contact .contact-info .left .info a {
+    font-size: .9rem;
+    font-weight: 300;
+    color: var(--white-100);
+}
+
+.contact .contact-info .right form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact .contact-info .right form input,
+.contact .contact-info .right form textarea {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid var(--white);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--white);
+    outline: none;
+}
+
+.contact .contact-info .right form button {
+    width: fit-content;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.contact .contact-info .right form button::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 45px;
+    background: var(--white);
+    left: 0;
+    bottom: -3px;
+    cursor: pointer;
+}
+
+
+
+/* =========== Footer ============ */
+
+footer {
+    background: var(--bg);
+    padding: 50px 0;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+
+/* =========== Go Up ============ */
+.go-up {
+    height: 45px;
+    width: 45px;
+    background: var(--white-50);
+    border-radius: 50%;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: block;
+    transition: .5s;
+}
+
+.go-up:hover {
+    background: var(--white-100);
+}
+
+.go-up:hover .icon i {
+    color: var(--bg);
+}
+
+.go-up .icon {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.go-up .icon i {
+    color: var(--white);
+}
+
+
+
+
+/* =========== Responsive ============ */
+
+@media only screen and (max-width: 1232px) {
+    .hero .hero-main .left h1 {
+        font-size: 4rem;
+        margin-bottom: 30px;
+        line-height: 60px;
+    }
+
+    .hero .hero-main .left p {
+        line-height: 25px;
+    }
+
+    .my-projects .tab-cont button {
+        font-size: 1rem;
+        margin: 4px 0px;
+    }
+
+    .my-projects .project .tab-content .contents {
+        width: clamp(300px, 50vw, 700px);
+        gap: 15px;
+    }
+
+
+    .contact .contact-info {
+        gap: 50px;
+    }
+
+    .contact .contact-info .left {
+        gap: 15px;
+        width: 450px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero .hero-main .right img {
+        display: none;
+    }
+
+    .hero .hero-main .left {
+
+        width: 100%;
+        gap: 20px;
+    }
+
+    .hero .hero-main .left p {
+        width: 100%;
+    }
+
+    .hero .hero-main {
+        display: block;
+        padding: 80px 200px 80px 130px;
+    }
+
+    .hero .scroll-down {
+        left: 130px;
+    }
+
+    .contact .contact-info .left .des {
+        display: none;
+    }
+
+
+    .contact .contact-info {
+        margin-top: 50px;
+        justify-content: flex-start;
+    }
+
+    .contact .contact-info .left {
+        gap: 0px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    nav .nav-menus .nav-left ul {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 832px) {
+    .about-me-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .about-me-detail .left {
+        width: 100%;
+    }
+
+    .about-me-detail .right {
+        width: 100%;
+    }
+
+
+    .about-me-detail .left .image img {
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 700px) {
+
+    nav .hamburger {
+        height: 70px;
+        width: 70px;
+    }
+
+    nav .hamburger .line {
+        right: 30%;
+    }
+
+    nav .hamburger .line-1 {
+        width: 30px;
+    }
+
+    nav .hamburger .line-2 {
+        width: 22px;
+    }
+
+    nav .hamburger .line-3 {
+        width: 15px;
+    }
+
+    nav .nav-menus .nav-right .circle {
+        display: none;
+    }
+
+    nav .nav-menus {
+        padding: 30px 40px;
+    }
+
+    .hero .scroll-down {
+        display: none;
+    }
+
+    .hero .hero-main .social-links {
+        display: none;
+    }
+
+    .hero .hero-main {
+        display: block;
+        padding: 80px 50px;
+    }
+
+    .hero .numbers .number {
+        width: calc(100vw / 3);
+        padding: 15px 20px;
+    }
+
+    .hero .line-left {
+        display: none;
+    }
+
+    .hero .numbers .number h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero .numbers .number p {
+        line-height: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .my-projects .project .tab-content .contents {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .my-projects .project .tab-content .contents .technology {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 25px;
+    }
+
+    .my-projects .project .tab-content .contents .action-buttons {
+        gap: 20px;
+    }
+
+    .my-projects .project .tab-content .contents .action-buttons a {
+        font-size: 1rem;
+    }
+
+    .my-projects .tab-cont button .line {
+        display: none;
+    }
+
+    .my-projects .tab-cont button .name {
+        display: none;
+    }
+
+    .my-projects .tab-cont {
+        min-width: 60px;
+    }
+
+    .my-projects .tabs {
+        justify-content: flex-start;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+
+    .contact .contact-info .right form input,
+    .contact .contact-info .right form textarea {
+        width: 350px;
+    }
+
+    .hero .hero-main {
+        padding: 80px 20px;
+    }
+
+    .project-view .images {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-view .images img {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+
+    .contact .contact-info .right form input,
+    .contact .contact-info .right form textarea {
+        width: 300px;
+    }
+}

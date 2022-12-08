@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Icon CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/M.png" type="image/x-icon">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500;8..144,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="hero">
+        <nav>
+            <div class="hamburger" onclick="openNav()">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+            <div class="nav-menus">
+                <div class="nav-left">
+                    <ul>
+                        <li><a href="#about-me">About</a></li>
+                        <li><a href="#my-projects">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="circle"></div>
+                    <a href="https://drive.google.com/file/d/1mlaIPvDOpVM1ng_70rItC3OIDkGSE6WW/view?usp=sharing"
+                        target="_blank">Download Resume</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="hero-main">
+            <div class="left">
+                <h1 class="hero-title">I cook website</h1>
+                <p class="hero-description">Hi there! It's Jannatul Ferdousi Mou you're visting right now. Let me introduce
+                    myself. I'm a Web
+                    Developer, UI/UXDesigner, Programmer. <br> I'm Pursuing BSc in Computer Science and Engineering from
+                    Daffodil International University. And Currently living in Dhaka.</p>
+            </div>
+            <div class="right">
+                <img class="hero-img" src="img/computer.png" alt="">
+            </div>
+
+            <div class="social-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100040537950035"><i
+                                class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/jannatul-ferdousi-mou-867450214/"><i
+                                class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/jannatul-mou149"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="numbers">
+            <div class="number number-1">
+                <h2>14+</h2>
+                <p>total project</p>
+            </div>
+            <div class="number number-2">
+                <h2>3+</h2>
+                <p>full stack project</p>
+            </div>
+            <div class="number number-3">
+                <h2>10+</h2>
+                <p>front end project</p>
+            </div>
+        </div>
+
+        <a href="#my-projects" class="scroll-down">
+            <p>SCROLL</p>
+            <div class="triangle-down"></div>
+        </a>
+
+        <div class="line-left"></div>
+        <div class="line-bottom"></div>
+
+        <div id="myNav" class="overlay">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+            <div class="closebtn" onclick="closeNav()">
+                <div class="cross-1"></div>
+                <div class="cross-2"></div>
+            </div>
+
+            <div class="overlay-content">
+                <a href="#about-me" onclick="closeNav()">About</a>
+                <a href="#my-projects" onclick="closeNav()">Portfolio</a>
+                <a href="#blog" onclick="closeNav()">Blog</a>
+                <a href="#contact" onclick="closeNav()">Contact</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="about-me" id="about-me">
+        <div class="my-container about">
+
+            <div class="sec-title">
+                <p class="title">About Me</p>
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+
+
+            <div class="about-me-detail">
+                <div class="left">
+                    <h2>I AM Jannatul Ferdousi Mou</h2>
+                    <p class="about-info">I enjoy solving problem with clean scalable solutions. <br> I have a genuine
+                        passion for inspiring design and development.
+                    </p>
+
+                    <div class="image">
+                        <img src="img/about-me-img.png" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <button class="accordion accordion-1">UX/UI DESIGN</button>
+                    <div class="panel">
+                        <p>No matter how tight product cycles are, I never jump straight into Sketch too early. I invest
+                            time in bringing order to your requirements and understanding what we're about to design.
+                            This results in a simple and coherent UI/UX Design</p>
+                    </div>
+
+                    <button class="accordion accordion-2">PROBLEM SOLVING</button>
+                    <div class="panel">
+                        <p>Solving customers’ problems is more than just fixing the bugs or providing detailed
+                            instructions. It’s about being prompt, patient, polite, and staying by their side all the
+                            way through. No doubt, I have amazing problem solving skills</p>
+                    </div>
+
+                    <button class="accordion accordion-3">FRONTEND DEVELOPMENT</button>
+                    <div class="panel">
+                        <p>Put user needs at the center of our efforts focusing on designing usable, delightful,
+                            efficient, and fun experiences. From user onboarding to feedback and review, products
+                            consist of an integrated set of experiences working together seamlessly.</p>
+                    </div>
+                    <button class="accordion accordion-4">BACKEND DEVELOPMENT</button>
+                    <div class="panel">
+                        <p>I use MERN Stack Development, with software components like MongoDB, Express.JS, React and
+                            Node.JS, is an open-source JavaScript designed for building web applications and dynamic
+                            websites. MERN Stack is designed solely to ease up the process of development as each of
+                            these tools provides an end-to-end developing environment .</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <section class="my-projects" id="my-projects">
+        <div class="my-container">
+
+            <div class="sec-title">
+                <p class="title">My Projects</p>
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+
+            <div class="project">
+                <div class="tabs">
+
+                    <div class="tab-cont">
+                        <button class="but active" onclick="tabs(event, 'tab1')">01 <span class="line"></span> <span
+                                class="name">Dream PC
+                                Build</span> </button>
+                        <button class="but" onclick="tabs(event, 'tab2')">02 <span class="line"></span> <span
+                                class="name">Automoto</span></button>
+                        <button class="but" onclick="tabs(event, 'tab3')">03 <span class="line"></span> <span
+                                class="name">Mou
+                                Photography</span></button>
+                        <button class="but" onclick="tabs(event, 'tab4')">04 <span class="line"></span> <span
+                                class="name">Netizen
+                                Review</span></button>
+                        <button class="but" onclick="tabs(event, 'tab5')">05 <span class="line"></span> <span
+                                class="name">Dream
+                                Waving</span></button>
+                    </div>
+
+                    <div class="all-projects">
+                        <div class="tab-content tab1 active" id="tab1">
+                            <div class="contents">
+                                <img src="img/ss1.png" alt="">
+                                <h3 class="name">Dream PC Build</h3>
+                                <p class="description">Computer part selling website with both user and admin management
+                                    system...</p>
+
+
+                                <a href="lib/project1.html" class="more-details">
+                                    <button>
+                                        More Details
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="tab2">
+                            <div class="contents">
+                                <img src="img/ss2.png" alt="">
+                                <h3 class="name">Automoto</h3>
+                                <p class="description">Car Warehouse management application for company use which is
+                                    secure and also desktop and mobile responsive...</p>
+                                <a href="lib/project2.html" class="more-details">
+                                    <button>
+                                        More Details
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="tab3">
+                            <div class="contents">
+                                <img src="img/ss3.png" alt="">
+                                <h3 class="name">Mou Photography</h3>
+                                <p class="description">Mou Photography is personal service offering website
+
+                                    Add new Services...</p>
+
+
+                                <a href="lib/project3.html" class="more-details">
+                                    <button>
+                                        More Details
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="tab4">
+                            <div class="contents">
+                                <img src="img/ss4.png" alt="">
+                                <h3 class="name">Netizen Review</h3>
+                                <p class="description">This is a Review Website Created with React
+                                    This project includes React Routing ...</p>
+
+                                <a href="lib/project4.html" class="more-details">
+                                    <button>
+                                        More Details
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="tab5">
+                            <div class="contents">
+                                <img src="img/ss5.png" alt="">
+                                <h3 class="name">Dream Waving Convention Center</h3>
+                                <p class="description">Dream waving convention center is Convention hall and catering
+                                    service showcasing website...</p>
+                                <a href="lib/project5.html" class="more-details">
+                                    <button>
+                                        More Details
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="my-blogs" id="blog">
+        <div class="my-container">
+            <div class="sec-title">
+                <p class="title">My Blogs</p>
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+
+            <div class="blogs">
+                <h1>Section will come soon...</h1>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="contact" id="contact">
+        <div class="my-container">
+            <div class="sec-title">
+                <p class="title">Contact</p>
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+
+            <div class="contact-info">
+                <div class="left">
+                    <p class="des">If you are interested in any of the works or would like to know more about me and the
+                        services I offer.
+                        <br>
+                        Please contact me via email or phone prior to.
+                    </p>
+                    <div class="address info">
+                        <h5>Address</h5>
+                        <p>1337/3 Nurpur, Zia sharani, Dhaka 1236</p>
+                    </div>
+                    <div class="email info">
+                        <h5>Email</h5>
+                        <p><a href="mailto:jannatulferdousimou79@gmail.com">jannatulferdousimou79@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="phone info">
+                        <h5>Phone</h5>
+                        <p><a href="tel:01303110524">+8801303110524</a></p>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <form action="#" id="form">
+                        <input type="text" name="from_name" id="from_name" placeholder="Name" required>
+                        <input type="email" name="email_id" id="email_id" placeholder="Email" required>
+                        <textarea name="message" id="message" rows="4" placeholder="message" required></textarea>
+                        <button type="submit" id="button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="my-container">
+            <p>&copy;copyright, 2022. Jannatul Ferdousi Mou. All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+
+
+    <a href="#" class="go-up">
+        <div class="icon">
+            <i><i class="fa-solid fa-angle-up"></i></i>
+        </div>
+    </a>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">emailjs.init('1MFgs5B6gETC63hlH')</script>
+
+    <script src="js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/gsapAnimation.js"></script>
+
+</body>
+
+</html>
